@@ -4,107 +4,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
-    <title>Document</title>
+    <title>Grid</title>
     <style>
         body {
-            background-color: rgb(210, 210, 210);
-            margin: 0;
-            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .main {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-areas:
+                "head head head"
+                "article article aside"
+                "article1 article1 aside"
+                "article2 article2 aside"
+                "article3 article3 aside"
+                "article4 article4 aside"
+                "article5 article5 aside"
+                "footer footer footer";
+            width: 90%;
+            gap: 20px;
+            height: 90vh;
 
         }
 
-        h1 {
+        .header {
+            background: purple;
+            grid-area: head;
+        }
+
+        .footer {
+            background: yellow;
+            grid-area: footer;
+        }
+
+        .article {
+            background: #cccc;
+            grid-area: article;
+        }
+
+        .article1 {
+            background: #cccc;
+            grid-area: article1;
+        }
+
+        .article2 {
+            background: #cccc;
+            grid-area: article2;
+        }
+
+        .article3 {
+            background: #cccc;
+            grid-area: article3;
+        }
+
+        .article4 {
+            background: #cccc;
+            grid-area: article4;
+        }
+
+        .article5 {
+            background: #cccc;
+            grid-area: article5 ;
+        }
+
+        .aside {
+            background: darkcyan;
+            grid-area: aside;
+        }
+
+        .text {
             text-align: center;
-            color: blue;
-        }
-
-        h2 {
-            text-align: center;
-            color: green;
-        }
-
-        p {
-            text-align: center;
-            color: chocolate;
-        }
-
-        table {
-            background-color: rgb(255, 255, 255);
-            margin: 50px auto;
-        }
-
-        #form {
-            align-content: center;
-            width: 200px;
-            background-color: rgb(255, 255, 255);
-            border: solid 2px;
-            /* margin-right: 85%; */
-            padding: 50px
-        }
-
-        #button {
-            background-color: blue;
-            color: rgb(255, 255, 255);
-        }
-
-        #anchor {
-            color: green;
+            font-weight: bold;
+            color: black;
+            font-size: xx-large;
         }
     </style>
 </head>
 
 <body>
-    <h1>Welcome to My First Web Page</h1>
-    <p>This is a simple HTML & CSS mini project for beginners</p>
-    <p>Visit <a id="anchor" href="">Google</a> for more info</p>
-    <h2>Student Information</h2>
-    <div>
-        <table border="3" cellspacing="1" cellpadding="5">
-            <tr>
-                <th>Name</th>
-                <th>Class</th>
-                <th>Marks</th>
-            </tr>
-            <tr>
-                <td>Ali</td>
-                <td rowspan="2">
-                    <center>10</center>
-                </td>
-                <td>85</td>
-            </tr>
-            <tr>
-                <td>Sara</td>
-                <td>90</td>
-            </tr>
-            <tr>
-                <td>Ahmed</td>
-                <td colspan="2">
-                    <center>8</center>
-                </td>
-            </tr>
-        </table>
+    <div class="main">
+        <div class="header text">
+            Header
+        </div>
+        <div class="article text">Article1</div>
+        <div class="article1 text">Article2</div>
+        <div class="article2 text">Article3</div>
+        <div class="article3 text">Article4</div>
+        <div class="article4 text">Article5</div>
+        <div class="article5 text">Article6</div>
+        <div class="aside text">Aside</div>
+        <div class="footer text">Footer</div>
     </div>
-    <h2>Contact Form</h2>
-    <div id="form">
-        <form>
-            <label for="name"><b>Name:</b></label>
-            <br>
-            <input type="text" name="name" id="name" placeholder="insert your name">
-            <br>
-            <label for="email"><b>Email:</b></label>
-            <br>
-            <input type="email" name="email" id="email" placeholder="insert your email">
-            <br>
-            <label for="text"><b>Message:</b></label>
-            <br>
-            <textarea placeholder="insert your message"></textarea>
-            <br>
-            <input type="button" value="Submit" id="button">
-
-        </form>
-    </div>
-    <h2>Programming is not about typing , its about thinking</h2>
 </body>
 
 </html>
