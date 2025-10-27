@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .payment-form {
+            background-color: #f86951;
+            padding: 20px 30px;
+            border-radius: 6px;
+            width: 320px;
+            color: #fff;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .payment-form h2 {
+            text-align: center;
+            margin-bottom: 15px;
+            color: #000;
+        }
+
+        fieldset {
+            border: none;
+            margin-bottom: 15px;
+        }
+
+        h4 {
+            font-weight: bold;
+            color: #a94908;
+            margin-bottom: 8px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 6px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        .card-type {
+            margin-bottom: 10px;
+        }
+
+        .card-type label {
+            margin-right: 10px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            background-color: #703c2b;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #5b2f20;
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+    <div class="payment-form">
+        <h2>Payment form</h2>
+
+        <form>
+            <div>
+                <h4>Step 1: Your details</h4>
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="First and last name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="example@domain.com" required>
+
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" placeholder="Eg. +92345 0000000" required>
+            </div>
+
+            <div>
+                <h4>Step 2: Delivery address</h4>
+                <label for="address">Address</label>
+                <textarea id="address" rows="3"></textarea>
+
+                <label for="postcode">Post code</label>
+                <input type="text" id="postcode">
+
+                <label for="country">Country</label>
+                <input type="text" id="country">
+            </div>
+
+            <div>
+                <h4>Step 3: Card details</h4>
+                <label>Card type</label>
+                <div class="card-type">
+                    <label><input type="radio" name="card" checked> VISA</label>
+                    <label><input type="radio" name="card"> Debit</label>
+                    <label><input type="radio" name="card"> Mastercard</label>
+                </div>
+
+                <label for="card-number">Card number</label>
+                <input type="text" id="card-number">
+
+                <label for="security-code">Security code</label>
+                <input type="text" id="security-code">
+
+                <label for="card-name">Name on card</label>
+                <input type="text" id="card-name" placeholder="Exact name as on the card">
+            </div>
+
+            <button type="submit">BUY IT!</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

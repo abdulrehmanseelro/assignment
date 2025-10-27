@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f7ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .quiz-box {
+            background: #fff;
+            border: 3px solid #0078ff;
+            border-radius: 8px;
+            width: 340px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .quiz-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+        }
+
+        .quiz-header h2 {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .timer {
+            background-color: #e7f0ff;
+            border: 1px solid #0078ff;
+            border-radius: 5px;
+            padding: 3px 8px;
+            font-size: 14px;
+            color: #0078ff;
+        }
+
+        .question-section h3 {
+            font-size: 18px;
+            margin-bottom: 12px;
+            color: #000;
+        }
+        .option {
+            display: block;
+            background-color: #f8faff;
+            border: 1px solid #cfd9ff;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+            position: relative;
+        }
+
+        .option:hover {
+            background-color: #e0edff;
+        }
+
+        .option input {
+            display: none;
+        }
+
+        .option .text {
+            display: block;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+            margin-top: 15px;
+        }
+
+        .footer p {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .footer button {
+            background-color: #0078ff;
+            border: none;
+            color: #fff;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .footer button:hover {
+            background-color: #005fcc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="quiz-box">
+        <div class="quiz-header">
+            <h2>Awesome Quiz Application</h2>
+        </div>
+
+        <div class="question-section">
+            <h3>1. What does HTML stand for?</h3>
+
+            <div class="options">
+                <label class="option">
+                    <input type="radio" name="q1" />
+                    <span class="text">Hyper Text Preprocessor</span>
+                </label>
+
+                <label class="option correct">
+                    <input type="radio" name="q1" />
+                    <span class="text">Hyper Text Markup Language</span>
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="q1" />
+                    <span class="text">Hyper Text Multiple Language</span>
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="q1" />
+                    <span class="text">Hyper Tool Multi Language</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>1 of 5 Questions</p>
+            <button>Next Que</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
